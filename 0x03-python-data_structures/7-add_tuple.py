@@ -8,5 +8,5 @@ def add_tuple(tuple_a=(), tuple_b=()):
 
     if len(tuple_a) >= 2 or len(tuple_b) >= 1:
         return (result_1, result_2)
-    else:
+    elif len(tuple_a) == 0 and len(tuple_b) == 0:
         return None
