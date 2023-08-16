@@ -17,3 +17,12 @@ my_list is the initial list
 search is the element to replace in the list
 replace is the new element
 You are not allowed to import any module.
+
+-A function that adds all unique integers in a list (only once for
+each integer).
+Prototype: def uniq_add(my_list=[]):
+You are not allowed to import any module.
+
+-A function that returns a set of common elements in two sets.
+Prototype: def common_elements(set_1, set_2):
+You are not allowed to import any module.
