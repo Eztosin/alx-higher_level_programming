@@ -13,7 +13,7 @@ if __name__ == "__main__":
     b = int(sys.argv[3])
 
     if operator not in "+-*/":
-        print("Unknown operator. Availaible operators: +, -, *,and /")
+        print("Unknown operator. Availaible operators: +, -, * and /")
         sys.exit(1)
 
     if operator == "+":
