@@ -23,6 +23,6 @@ if __name__ == "__main__":
     elif operator == "*":
         total = mul(a, b)
     elif operator == "/":
-        result = div(a, b)
+        total = div(a, b)
 
     print("{:d} {} {:d} = {:d}".format(a, operator, b, total))
