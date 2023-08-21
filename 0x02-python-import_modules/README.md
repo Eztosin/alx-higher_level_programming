@@ -117,3 +117,13 @@ Your code should not be executed when imported.
 -A program that prints #pythoniscool, followed by a new line, in the standard output.
 Your program should be maximum 2 lines long
 You are not allowed to use print or eval or open or import sys in your file 101-easy_print.py.
+
+-A program that prints the alphabet in uppercase, followed by a new
+line.
+Your program should be maximum 3 lines long
+You are not allowed to use:
+any loops
+any conditional statements
+str.join()
+any string literal
+any system calls.
