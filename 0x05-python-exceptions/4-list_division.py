@@ -5,6 +5,10 @@ def list_division(my_list_1, my_list_2, list_length):
         try:
             numerator = my_list_1[i]
             denominator = my_list_2[i]
+        except IndexError:
+            print("out of range")
+            result.append(0)
+        finally:
             if not (isinstance(numerator, (int, float)) and
                     isinstance(denominator, (int, float))):
                 print("wrong type")
@@ -14,7 +18,4 @@ def list_division(my_list_1, my_list_2, list_length):
                 result.append(0)
             else:
                 result.append(numerator / denominator)
-        except IndexError:
-            print("out of range")
-            result.append(0)
     return result
