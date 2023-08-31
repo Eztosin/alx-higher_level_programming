@@ -10,7 +10,7 @@ class Square:
 
         """Initializing size with the required error checks"""
         self.size = size
-        
+
     @property
     def size(self):
         """Getter method to retrieve size"""
