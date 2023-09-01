@@ -1,21 +1,24 @@
 #!/usr/bin/python3
 def list_division(my_list_1, my_list_2, list_length):
-    result = []
+    """Divides elements in 2 lists"""
+
+    list_result = []
     for i in range(list_length):
         try:
-            numerator = my_list_1[i]
-            denominator = my_list_2[i]
+            result = my_list_1[i] / my_list_2[i]
+
+        except TypeError:
+            print("wrong type")
+            result = 0
+            
+        except ZeroDivisionError:
+            print("division by 0")
+            result = 0
+            
         except IndexError:
             print("out of range")
-            result.append(0)
+            result = 0
+            
         finally:
-            if not (isinstance(numerator, (int, float)) and
-                    isinstance(denominator, (int, float))):
-                print("wrong type")
-                result.append(0)
-            elif denominator == 0:
-                print("division by 0")
-                result.append(0)
-            else:
-                result.append(numerator / denominator)
-    return result
+            list_result.append(result)
+    return (list_result)
