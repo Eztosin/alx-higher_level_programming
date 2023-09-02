@@ -52,12 +52,19 @@ class Square:
     def __str__(self):
         """String representation of the square"""
 
+        result = []
+
         if self.__size == 0:
             return ""
 
         for _ in range(self.__position[1]):
-            print()
+            result.append("")
+
         for _ in range(self.__size):
-            print("{}".format(" " * self.__position[0] +
-                  "#" * self.__size))
-        return ""
+            if self.__position[0] > 0:
+                result.append(" " * self.__position[0] +
+                              "#" * self.__size)
+            else:
+                result.append("#" * self.__size)
+
+        return "\n".join(result)
