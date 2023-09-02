@@ -45,6 +45,8 @@ class SinglyLinkedList:
         """inserts a new node with the given value into
         the linked list"""
         new_node = Node(value)
+        if not isinstance(value, int):
+            raise TypeError("data must be an integer")
         if self.head is None or value < self.head.data:
             new_node.next_node = self.head
             self.head = new_node
