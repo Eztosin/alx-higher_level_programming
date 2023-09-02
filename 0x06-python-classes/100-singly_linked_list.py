@@ -7,7 +7,7 @@ class Node:
 
     def __init__(self, data, next_node=None):
         """Initializes the singly linked list"""
-        if not isinstance(value, int):
+        if not isinstance(data, int):
             raise TypeError("data must be an integer")
         self.__data = data
         self.__next_node = None
