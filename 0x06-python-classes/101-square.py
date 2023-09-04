@@ -45,7 +45,6 @@ class Square:
         """returns the area of the square"""
         return (self.__size ** 2)
 
-
     def __str__(self):
         """String representation of the square"""
 
