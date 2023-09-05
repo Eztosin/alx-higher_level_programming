@@ -16,3 +16,7 @@ carried out in the alx-higher_level_programming program.
 -0x06-python-classes
 
 -0x07-python-test_driven_development
+
+-0x08-python-more_classes
+
+-0x09-python-everything_is_object
