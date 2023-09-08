@@ -1,0 +1,51 @@
+"""A function that prints a text with 2 lines after each character '.' , '?',and ':'  """
+# Test cases for the function def text_indentation(text)
+# Where text is the string to be passed.
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("ALX? I love what ALX Africa and Holberton "
+... "School is doing for Africans, It's a rare Opportunity for anyone"
+... " and everyone. All students: learners need to play their parts "
+... "and put in their best efforts. ")
+ALX?
+<BLANKLINE>
+I love what ALX Africa and Holberton School is doing for Africans, It's a rare Opportunity for anyone and everyone.
+<BLANKLINE>
+All students:
+<BLANKLINE>
+learners need to play their parts and put in their best efforts.
+<BLANKLINE>
+
+>>> text_indentation(4)
+Traceback (most recent call last):
+      ...
+TypeError: text must be a string
+
+>>> text_indentation(" Hello, World. ")
+ Hello, World.
+<BLANKLINE>
+
+>>> text_indentation(" Hello.     ")
+ Hello.
+<BLANKLINE>
+<BLANKLINE>
+
+>>> text_indentation("         ")
+<BLANKLINE>
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+      ...
+TypeError: text must be a string
+
+>>> text_indentation("\n\n Print a new line. ")
+<BLANKLINE>
+<BLANKLINE>
+ Print a new line.
+<BLANKLINE>
+
+>>> text_indentation()
+Traceback (most recent call last):
+      ...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
