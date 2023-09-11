@@ -11,3 +11,14 @@ Public instance method: def print_sorted(self): that prints the list,
 but sorted (ascending sort)
 You can assume that all the elements of the list will be of type int
 You are not allowed to import any module.
+
+-Write a function that returns True if the object is exactly an
+instance of the specified class ; otherwise False.
+Prototype: def is_same_class(obj, a_class):
+You are not allowed to import any module.
+
+-Write a function that returns True if the object is an instance of,
+or if the object is an instance of a class that inherited from,
+the specified class ; otherwise False.
+Prototype: def is_kind_of_class(obj, a_class):
+You are not allowed to import any module.
