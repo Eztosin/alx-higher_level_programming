@@ -1,0 +1,57 @@
+# Test cases for a class BaseGeometry (based on 6-base_geometry.py) 
+
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> mod_s = __import__("7-base_geometry").__doc__
+>>> len(mod_s) > 1
+True
+
+>>> cls = __import__("7-base_geometry").BaseGeometry.__doc__
+>>> len(cls) > 1
+True
+
+>>> mod1 = __import__("7-base_geometry").BaseGeometry.area.__doc__
+>>> len(mod1) > 1
+True
+
+>>> mod2 = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+>>> len(mod2) > 1
+True
+
+>>> b = BaseGeometry()
+>>> b.area()
+Traceback (most recent call last):
+	  ...
+Exception: area() is not implemented
+
+
+>>> b.area(1)
+Traceback (most recent call last):
+          ...
+TypeError: area() takes 1 positional argument but 2 were given
+
+>>> b.integer_validator("integer", 0)
+Traceback (most recent call last):
+	  ...
+ValueError: integer must be greater than 0
+
+
+>>> b.integer_validator("integer", -5)
+Traceback (most recent call last):
+	  ...
+ValueError: integer must be greater than 0
+
+>>> b.integer_validator("bool", True)
+Traceback (most recent call last):
+...
+TypeError: bool must be an integer
+
+>>> b.integer_validator("float", 1.5)
+Traceback (most recent call last):
+	  ...
+TypeError: float must be an integer
+>>> b.integer_validator("complex", complex(1, 1))
+Traceback (most recent call last):
+          ...
+TypeError: complex must be an integer
