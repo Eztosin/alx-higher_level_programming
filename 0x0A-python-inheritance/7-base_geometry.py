@@ -21,4 +21,4 @@ class BaseGeometry:
             raise TypeError("{}".format(name + " must be an integer"))
         if value <= 0:
             raise ValueError("{}".format(name + " must be greater "
-                            "than 0"))
+                                         "than 0"))
