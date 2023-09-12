@@ -9,14 +9,10 @@ class BaseGeometry:
             ValueError: If value is less or equal to 0
     """
 
-    def area(self):
-        """Raises an exception"""
-        raise Exception("area() is not implemented")
-
     def integer_validator(self, name, value):
         """validates the value"""
-#        self.name = name
-#        self.value = value
+        self.name = name
+        self.value = value
         if type(value) != int:
             raise TypeError("{}".format(name + " must be an integer"))
         if value <= 0:
@@ -37,3 +33,11 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.integer_validator("height", height)
         self.__height = height
+
+    def area(self):
+        """returns the area of the rectangle"""
+        return (self.__height * self.__width)
+
+    def __str__(self):
+        """prints the rectangle"""
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
