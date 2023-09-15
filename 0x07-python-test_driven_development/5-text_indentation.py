@@ -13,9 +13,9 @@ def text_indentation(text):
 
     while i < str_len:
         if text[i] in ('.', '?', ':'):
-            if (i + 1) != str_len:
+            if (i + 1) != str_len and text[i] == ' ':
                 new_text = text[i + 1]
-                if new_text not in ('.', '?', ':', '' ''):
+                if new_text not in ('.', '?', ':'):
                     print("{}".format(text[i]), end='\n\n')
                     if new_text == ' ':
                         i += 2
