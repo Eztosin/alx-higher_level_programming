@@ -17,10 +17,10 @@ def text_indentation(text):
                 new_text = text[i + 1]
                 if new_text not in ('.', '?', ':'):
                     print("{}".format(text[i]), end='\n\n')
-                if new_text == ' ':
-                    i += 1
-                if new_text != ' ':
-                    i += 2
+                    if new_text == ' ':
+                        i += 2
+                    if new_text != ' ':
+                        i += 1
         else:
             print("{}".format(text[i]), end='')
         i = i + 1
