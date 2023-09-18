@@ -40,6 +40,11 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             rect = Rectangle("String", 5)
 
+    def test_width_negative(self):
+        """testing width with a negative number"""
+        with self.assertRaises(ValueError):
+            rect = Rectangle(-3, 5)
+
     def test_width_bool(self):
         """testing width with a boolean value instead of an integer"""
         with self.assertRaises(TypeError):
@@ -49,6 +54,11 @@ class TestRectangle(unittest.TestCase):
         """testing height with a string instead of an integer"""
         with self.assertRaises(TypeError):
             rect = Rectangle("String", 3)
+
+    def test_height_negative(self):
+        """testing height with a negative number"""
+        with self.assertRaises(ValueError):
+            rect = Rectangle(-3, 3)
 
     def test_height_bool(self):
         """testing height with a boolean instead of an integer"""
