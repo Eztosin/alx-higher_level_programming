@@ -6,7 +6,7 @@ from models.base import Base
 """Test cases for base module"""
 
 
-class test_base(unittest.TestCase):
+class TestBase(unittest.TestCase):
     """class to test base"""
     def test_id_valid(self):
         """test for a valid id"""
