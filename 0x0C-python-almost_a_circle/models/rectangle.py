@@ -59,7 +59,7 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         if value < 0:
-            raise ValueError("x must be > 0")
+            raise ValueError("x must be >= 0")
 
         self.__x = value
 
@@ -69,6 +69,18 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:
-            raise ValueError("y must be > 0")
+            raise ValueError("y must be >= 0")
 
         self.__y = value
+
+    def area(self):
+        """returns the area of the rectangle"""
+        return (self.__height * self.__width)
+
+    def display(self):
+        """displays to standard output the rectangle
+           using "#" symbol
+
+        """
+        for _ in range(self.__height):
+            print("{}".format("#" * self.__width))
