@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""Square module inherits from Rectangle class"""
+"""Module contains class Square that inherits from Rectangle"""
 from models.base import Base
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """a square class"""
+    """a class Square that inherits from Rectangle"""
+
     def __init__(self, size, x=0, y=0, id=None):
         """initializing the attributes"""
         self.size = size
@@ -57,5 +58,5 @@ class Square(Rectangle):
     def to_dictionary(self):
         """returns the dictionary representation of the square"""
         dic = {"id": self.id, "size": self.size, "x": self.x,
-               "y" self.y}
+               "y": self.y}
         return dic
