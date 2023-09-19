@@ -102,4 +102,3 @@ class Rectangle(Base):
 
 #    def update(self, *args):
 #       """assigns an argument to each attribute"""
-        
