@@ -43,7 +43,7 @@ class Base:
     def from_json_string(json_string):
         """returns the list of the JSON string representation"""
         json_list = []
-        if json_string is None and json_string == "":
+        if json_string is None and len(json_string) == 0:
             return json_list
         if not isinstance(json_string, str):
             raise TypeError("json_string must be a string")
