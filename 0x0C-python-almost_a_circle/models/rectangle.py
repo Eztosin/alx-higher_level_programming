@@ -89,9 +89,17 @@ class Rectangle(Base):
         for _ in range(self.y):
             print()
         for _ in range(self.__height):
-            print("{} {}".format(" " * self.x, "#" * self.__width))
+            for _ in range(self.x):
+                print(" ", end="")
+            for _ in range(self.__width):
+                print("#", end="")
+            print()
 
     def __str__(self):
         """returns a string representation of the rectangle"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height)
+
+#    def update(self, *args):
+#       """assigns an argument to each attribute"""
+        
