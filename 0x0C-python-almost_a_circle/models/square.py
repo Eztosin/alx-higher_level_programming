@@ -3,6 +3,7 @@
 from models.base import Base
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """a square class"""
     def __init__(self, size, x=0, y=0, id=None):
@@ -35,7 +36,6 @@ class Square(Rectangle):
         """returns a string representation of the square"""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
                                                  self.y, self.size)
-
 
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
