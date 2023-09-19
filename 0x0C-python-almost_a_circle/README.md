@@ -90,3 +90,90 @@ All width, height, x and y validation must inherit from
 Rectangle - same behavior in case of wrong data
 The overloading __str__ method should
 return [Square] (<id>) <x>/<y> - <size> - in our case, width or height.
+
+-Update the class Square by adding the public getter and setter size
+The setter should assign (in this order) the width and the
+height - with the same value
+The setter should have the same value validation as the Rectangle
+for width and height - No need to change the exception error message
+(It should be the one from width).
+
+-Update the class Square by adding the public method
+def update(self, *args, **kwargs) that assigns attributes:
+*args is the list of arguments - no-keyworded arguments
+1st argument should be the id attribute
+2nd argument should be the size attribute
+3rd argument should be the x attribute
+4th argument should be the y attribute
+**kwargs can be thought of as a double pointer to a
+dictionary: key/value (keyworded arguments)
+**kwargs must be skipped if *args exists and is not empty
+Each key in this dictionary represents an attribute to the instance.
+
+-Update the class Rectangle by adding the public method
+def to_dictionary(self): that returns the dictionary representation
+of a Rectangle:
+This dictionary must contain:
+id
+width
+height
+x
+y
+
+-Update the class Square by adding the public method
+def to_dictionary(self): that returns the dictionary representation
+of a Square:
+This dictionary must contain:
+id
+size
+x
+y
+
+-JSON is one of the standard formats for sharing data representation.
+Update the class Base by adding the static method
+def to_json_string(list_dictionaries): that returns the JSON string
+representation of
+list_dictionaries:
+list_dictionaries is a list of dictionaries
+If list_dictionaries is None or empty, return the string: "[]"
+Otherwise, return the JSON string representation of list_dictionaries.
+
+-Update the class Base by adding the class method
+def save_to_file(cls, list_objs): that writes the JSON string
+representation of list_objs to a file:
+list_objs is a list of instances who inherits of Base - example:
+list of Rectangle or list of Square instances
+If list_objs is None, save an empty list
+The filename must be: <Class name>.json - example: Rectangle.json
+You must use the static method to_json_string (created before)
+You must overwrite the file if it already exists.
+
+-Update the class Base by adding the static method
+def from_json_string(json_string): that returns the list of
+the JSON string representation json_string:
+json_string is a string representing a list of dictionaries
+If json_string is None or empty, return an empty list
+Otherwise, return the list represented by json_string.
+
+-Update the class Base by adding the class method
+def create(cls, **dictionary): that returns an instance with all
+attributes already set:
+**dictionary can be thought of as a double pointer to a dictionary
+To use the update method to assign all attributes, you must
+create a “dummy” instance before:
+Create a Rectangle or Square instance with “dummy” mandatory
+attributes (width, height, size, etc.)
+Call update instance method to this “dummy” instance to apply your
+real values
+You must use the method def update(self, *args, **kwargs)
+**dictionary must be used as **kwargs of the method update
+You are not allowed to use eval
+
+-Update the class Base by adding the class method
+def load_from_file(cls): that returns a list of instances:
+The filename must be: <Class name>.json - example: Rectangle.json
+If the file doesn’t exist, return an empty list
+Otherwise, return a list of instances - the type of these
+instances depends on cls (current class using this method)
+You must use the from_json_string and create methods
+(implemented previously)

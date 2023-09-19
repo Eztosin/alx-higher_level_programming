@@ -38,3 +38,12 @@ class Base:
             else:
                 new_list = [obj.to_dictionary() for obj in list_objs]
                 file.write(cls.to_json_string(new_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of the JSON string representation"""
+        if json_string is None and json_string == "":
+            return "[]"
+        if not isinstance(json_string, str):
+            raise TypeError("json_string must be a string")
+        return (json.loads(json_string))
