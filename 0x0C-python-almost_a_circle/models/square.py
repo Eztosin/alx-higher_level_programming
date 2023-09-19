@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Square module inherits from Rectangle class"""
 from models.base import Base
-from models.base import Rectangle
+from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """a square class"""
@@ -20,7 +20,7 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value):
-        """setter method to set the size of th square"""
+        """setter method to set the size of the square"""
         if isinstance(value, bool):
             raise TypeError("width must be an integer")
         if not isinstance(value, int):
@@ -30,6 +30,12 @@ class Square(Rectangle):
 
         self.__width = value
         self.__height = value
+
+    def __str__(self):
+        """returns a string representation of the square"""
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
+                                                 self.y, self.size)
+
 
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
