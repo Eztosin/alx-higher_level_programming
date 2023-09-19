@@ -86,10 +86,10 @@ class Rectangle(Base):
            using "#" symbol
 
         """
-        for _ in range(self.__y):
+        for _ in range(self.y):
             print()
         for _ in range(self.__height):
-            print("{} {}".format(" " * self.__x, "#" * self.__width))
+            print("{} {}".format(" " * self.x, "#" * self.__width))
 
     def __str__(self):
         """returns a string representation of the rectangle"""
