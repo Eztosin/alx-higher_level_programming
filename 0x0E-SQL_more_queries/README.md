@@ -5,25 +5,95 @@
 ## About 
 While SQL is a powerful language for managing data, it also has many intermediate concepts that can be used to create more complex and nuanced queries. Example of such include __Joins__, __Subqueries__ , __Aggregate Functions__ __Window Functions__, __Views__ and __Stored Procedures__ Lets explore the most common of them in this project. 
 
-## Resources
-1. [How to create a new user and assing permission in MySQL](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql)
-2. [How to use MySQL GRANT statement to assign permissions to users](https://www.mysqltutorial.org/mysql-grant.aspx)
-3. [MySQL constraits](https://zetcode.com/mysql/constraints/)
-4. [SQL techniques: subqueries](https://web.csulb.edu/colleges/coe/cecs/dbdesign/dbdesign.php?page=sql/subqueries.php)
-5. [SQL techniques: join](https://web.csulb.edu/colleges/coe/cecs/dbdesign/dbdesign.php?page=sql/join.php)
-6. [SQL techniqes: multiple joins and the disctint keyword](https://web.csulb.edu/colleges/coe/cecs/dbdesign/dbdesign.php?page=sql/multijoin.php)
-7. [SQL techniques: join types](https://web.csulb.edu/colleges/coe/cecs/dbdesign/dbdesign.php?page=sql/jointypes.php)
-8. [SQL techniques: unions and minus](https://web.csulb.edu/colleges/coe/cecs/dbdesign/dbdesign.php?page=sql/setops.php)
-9. [MySQL cheatsheet](https://intellipaat.com/mediaFiles/2019/02/SQL-Commands-Cheat-Sheet.pdf?US)
-10. [Seven Join types ](https://tableplus.com/blog/2018/09/a-beginners-guide-to-seven-types-of-sql-joins.html)
-11. [MySQL tutorial](https://www.youtube.com/watch?v=yPu6qV5byu4)
-12. [SQL style guide](https://www.sqlstyle.guide/)
-13. [MySQL 8.0 statement syntax](https://dev.mysql.com/doc/refman/8.0/en/sql-statements.html)
+Questions:
 
- Extra resources around relational database model design
+- Write a script that lists all privileges of the MySQL users
+user_0d_1 and user_0d_2 on your server (in localhost).
 
- [Design](https://www.guru99.com/database-design.html)
+- Write a script that creates the MySQL server user user_0d_1.
+user_0d_1 should have all privileges on your MySQL server
+The user_0d_1 password should be set to user_0d_1_pwd
+If the user user_0d_1 already exists, your script should not fail.
 
- [Normalization](https://www.guru99.com/database-normalization.html)
+-Write a script that creates the database hbtn_0d_2 and the user
+user_0d_2.
+user_0d_2 should have only SELECT privilege in the database hbtn_0d_2
+The user_0d_2 password should be set to user_0d_2_pwd
+If the database hbtn_0d_2 already exists, your script should not fail
+If the user user_0d_2 already exists, your script should not fail.
 
- [ER modeling](https://www.guru99.com/er-modeling.html)
+-Write a script that creates the table force_name on your MySQL server.
+force_name description:
+id INT
+name VARCHAR(256) can’t be null
+The database name will be passed as an argument of the mysql command
+If the table force_name already exists, your script should not fail.
+
+-Write a script that creates the table id_not_null on your
+MySQL server.
+id_not_null description:
+id INT with the default value 1
+name VARCHAR(256)
+The database name will be passed as an argument of the mysql command
+If the table id_not_null already exists, your script should not fail.
+
+-Write a script that creates the table unique_id on your MySQL server.
+unique_id description:
+id INT with the default value 1 and must be unique
+name VARCHAR(256)
+The database name will be passed as an argument of the mysql command
+If the table unique_id already exists, your script should not fail.
+
+-Write a script that creates the database hbtn_0d_usa and the table
+states (in the database hbtn_0d_usa) on your MySQL server.
+states description:
+id INT unique, auto generated, can’t be null and is a primary key
+name VARCHAR(256) can’t be null
+If the database hbtn_0d_usa already exists, your script should not fail
+If the table states already exists, your script should not fail.
+
+-Write a script that creates the database hbtn_0d_usa and the table
+cities (in the database hbtn_0d_usa) on your MySQL server.
+cities description:
+id INT unique, auto generated, can’t be null and is a primary key
+state_id INT, can’t be null and must be a FOREIGN KEY that
+references to id of the states table
+name VARCHAR(256) can’t be null
+If the database hbtn_0d_usa already exists, your script should not fail
+If the table cities already exists, your script should not fail.
+
+-Write a script that lists all the cities of California that can
+be found in the database hbtn_0d_usa.
+The states table contains only one record where name = California
+(but the id can be different, as per the example)
+Results must be sorted in ascending order by cities.id
+You are not allowed to use the JOIN keyword
+The database name will be passed as an argument of the mysql command.
+
+-Write a script that lists all cities contained in the database
+hbtn_0d_usa.
+Each record should display: cities.id - cities.name - states.name
+Results must be sorted in ascending order by cities.id
+You can use only one SELECT statement
+The database name will be passed as an argument of the mysql command.
+
+-Import the database dump from hbtn_0d_tvshows to your MySQL
+server: download
+Write a script that lists all shows contained in hbtn_0d_tvshows
+that have at least one genre linked.
+Each record should display: tv_shows.title - tv_show_genres.genre_id
+Results must be sorted in ascending order by tv_shows.title and
+tv_show_genres.genre_id
+You can use only one SELECT statement
+The database name will be passed as an argument of the mysql command.
+
+-Import the database dump of hbtn_0d_tvshows to your MySQL server:
+download (same as 10-genre_id_by_show.sql)
+Write a script that lists all shows contained in the database
+hbtn_0d_tvshows.
+Each record should display: tv_shows.title - tv_show_genres.genre_id
+Results must be sorted in ascending order by tv_shows.title and
+tv_show_genres.genre_id
+If a show doesn’t have a genre, display NULL
+You can use only one SELECT statement
+The database name will be passed as an argument of the mysql command.
