@@ -3,10 +3,10 @@
 /*
  a script that prints the first argument passed to it
 */
+const argv = process.argv[2];
 
-const argv = process.argv.slice(2);
-if (argv.length === 0) {
+if (argv === undefined) {
   console.log('No argument');
-} else if (argv.length === 1) {
-  console.log(argv[0]);
+} else {
+  console.log(argv);
 }
