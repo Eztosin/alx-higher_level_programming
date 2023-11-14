@@ -2,7 +2,7 @@
 /*
   a script that computes and prints a factorial
 */
-const computeFactorial = (n) => {
+function computeFactorial = (n) => {
   if (isNaN(n) || n < 0) {
     return (1);
   }
@@ -15,6 +15,4 @@ const computeFactorial = (n) => {
 };
 
 const arg = parseInt(process.argv[2]);
-const result = computeFactorial(arg);
-
-console.log(result);
+console.log(computeFactorial(arg));
