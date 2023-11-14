@@ -1,6 +1,6 @@
 #!/usr/bin/node
 /*
- a class Rectangle that defines a rectangle
+a class Rectangle that defines a rectangle
 */
 
 class Rectangle {
@@ -11,15 +11,15 @@ class Rectangle {
     }
   }
 
-    print() {
-	if (this.width && this.height) {
-	    let i = 0;
-	    while (i < this.height) {
-		console.log('X'.repeat(this.width));
-		i++;
-	    }
-	}
+  print () {
+    if (this.width && this.height) {
+      let i = 0;
+      while (i < this.height) {
+        console.log('X'.repeat(this.width));
+        i++;
+      }
     }
+  }
 }
 
 module.exports = Rectangle;
