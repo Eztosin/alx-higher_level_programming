@@ -6,7 +6,7 @@
 const texts = [
   'C is fun',
   'Python is cool',
-  'Javascript is amazing'
+  'JavaScript is amazing'
 ];
 
 let i = 0;
