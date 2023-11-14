@@ -2,7 +2,7 @@
 /*
   a script that computes and prints a factorial
 */
-function computeFactorial = (n) => {
+function computeFactorial (n) {
   if (isNaN(n) || n < 0) {
     return (1);
   }
