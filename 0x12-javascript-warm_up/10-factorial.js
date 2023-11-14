@@ -11,7 +11,7 @@ const computeFactorial = (n) => {
     return (1);
   }
 
-  return n * computeFactorial(n - 1);
+  return (n * computeFactorial(n - 1));
 };
 
 const arg = parseInt(process.argv[2]);
