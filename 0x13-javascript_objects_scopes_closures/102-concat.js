@@ -11,6 +11,6 @@ const fileC = process.argv[4];
 
 const textsA = fs.readFileSync(fileA, 'utf8');
 const textsB = fs.readFileSync(fileB, 'utf8');
-const concatenatedTexts = textsA + '\n' + textsB;
+const concatenatedTexts = textsA + textsB;
 
 fs.writeFileSync(fileC, concatenatedTexts);
