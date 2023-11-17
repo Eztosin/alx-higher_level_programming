@@ -95,19 +95,18 @@
   You are not allowed to use var.
 
 - Update this script to replace the value 12 with 89:
-
   You are not allowed to use var
-      guillaume@ubuntu:~/0x12$ cat 12-object.js
-      #!/usr/bin/node
-      const myObject = {
-      type: 'object',
-      value: 12
-      };
-      console.log(myObject);
-      /*
-      YOUR CODE HERE
-      */
-      console.log(myObject);
+      	  guillaume@ubuntu:~/0x12$ cat 12-object.js
+      	  #!/usr/bin/node
+      	  const myObject = {
+      	  type: 'object',
+      	  value: 12
+	  };
+	  console.log(myObject);
+	  /*
+	  YOUR CODE HERE
+      	  */
+	  console.log(myObject);
 
 - Write a function that returns the addition of 2 integers.
   The function must be visible from outside
@@ -115,13 +114,13 @@
   You are not allowed to use var
 
 - Write a file that modifies the value of myVar to 333
-  guillaume@ubuntu:~/0x12$ cat 100-main.js
-  #!/usr/bin/node
-  myVar = 89;
-  require('./100-let_me_const')
-  console.log(myVar);
-  guillaume@ubuntu:~/0x12$ ./100-main.js
-  333
+  	guillaume@ubuntu:~/0x12$ cat 100-main.js
+  	#!/usr/bin/node
+  	myVar = 89;
+  	require('./100-let_me_const')
+  	console.log(myVar);
+  	guillaume@ubuntu:~/0x12$ ./100-main.js
+  	333
 
 - Write a function that executes x times a function.
   The function must be visible from outside
