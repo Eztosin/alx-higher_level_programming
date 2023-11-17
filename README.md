@@ -1,4 +1,4 @@
-###This file contains the concepts of Python-Programming Language
+### This file contains the concepts of Python-Programming Language
 carried out in the alx-higher_level_programming program.
 
 - 0x00-python-hello_world
@@ -32,3 +32,5 @@ carried out in the alx-higher_level_programming program.
 - 0x0E. SQL - More queries
 
 - 0x12. JavaScript - Warm up
+
+- 0x13-javascript_objects_scopes_closures
