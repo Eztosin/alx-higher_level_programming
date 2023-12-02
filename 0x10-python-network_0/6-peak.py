@@ -20,7 +20,7 @@ def find_peak(list_of_integers):
     #     list_of_integers[i] == list_of_integers[i + 1]):
     #        results.append(list_of_integers[i])
     # return results
-    for i in range(1, high):
+    for i in range(0, high):
         if (list_of_integers[i] > list_of_integers[i - 1] and
                 list_of_integers[i] > list_of_integers[i + 1]):
             results.append(list_of_integers[i])
