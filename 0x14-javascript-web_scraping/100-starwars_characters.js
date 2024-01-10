@@ -18,18 +18,18 @@ request(apiUrl, (error, response, body) => {
     if (response.statusCode === 200) {
       const movieData = JSON.parse(body);
       const characters = movieData.characters;
-      
+
       const promises = characters.map((characterUrl) => {
         return new Promise((resolve, reject) => {
-          request(characterUrl, (error, response, body) => {
-            if (error) {
-              reject(error);
+          request(characterUrl, (err, resp, characterBody) => {
+            if (err) {
+              reject(new Error('Error fetching character data'));
             } else {
-              if (response.statusCode === 200) {
-                const characterData = JSON.parse(body);
+              if (resp.statusCode === 200) {
+                const characterData = JSON.parse(characterBody);
                 resolve(characterData.name);
               } else {
-                reject(`${response.statusCode}`);
+                reject(new Error(`Failed to retrieve character data. Status code: ${resp.statusCode}`));
               }
             }
           });
@@ -42,11 +42,11 @@ request(apiUrl, (error, response, body) => {
             console.log(name);
           });
         })
-        .catch((error) => {
-          console.error('Error:', error);
+        .catch((err) => {
+          console.error('Error:', err.message);
         });
     } else {
-      console.error(`Status code: ${response.statusCode}`);
+      console.error(`Failed to retrieve movie data. Status code: ${response.statusCode}`);
     }
   }
 });
