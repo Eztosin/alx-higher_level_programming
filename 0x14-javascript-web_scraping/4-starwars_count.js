@@ -17,10 +17,13 @@ request(apiUrl, (error, response, body) => {
   } else {
     if (response.statusCode === 200) {
       const films = JSON.parse(body).results;
-      const moviesWithWedgeAntilles = films.filter((film) =>
-        film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)
-      );
-      console.log(moviesWithWedgeAntilles.length);
+      let count = 0;
+      films.forEach((film) => {
+        if (film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)) {
+          count++;
+        }
+      });
+      console.log(count);
     } else {
       console.error(`Failed to retrieve movie data. Status code: ${response.statusCode}`);
     }
