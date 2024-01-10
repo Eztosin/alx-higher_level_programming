@@ -3,16 +3,10 @@
 const fs = require('fs');
 
 const filePath = process.argv[2];
+const text_file = process.argv[3]
 
-if (!filePath) {
-  console.error('Please provide a file path as an argument.');
-  process.exit(1);
-}
-
-fs.readFile(filePath, 'utf-8', (err, data) => {
+fs.writeFile(filePath, text_file, 'utf-8', (err) => {
   if (err) {
     console.error(err);
-  } else {
-    console.log(data);
   }
 });
